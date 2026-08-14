@@ -1,12 +1,12 @@
 /* ============ TOKENS ============ */
 :root{
-  --cream:      #FBF3E4;
-  --maroon:     #7A1F2B;
-  --maroon-dk:  #5C1620;
-  --gold:       #C9922E;
-  --green:      #2F4A3C;
-  --ink:        #241512;
-  --blush:      #F3D9C4;
+  --cream:      #FFF8EC;
+  --maroon:     #1E3A8A;
+  --maroon-dk:  #14265C;
+  --gold:       #B08968;
+  --green:      #1E3A8A;
+  --ink:        #241C14;
+  --blush:      #EADBC8;
   --paper:      #FFFDF8;
 
   --font-display: "Fraunces", serif;
@@ -128,7 +128,7 @@ h2.center{ text-align:center; }
 .story-media{ display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
 .media-block{ border-radius: var(--radius); aspect-ratio:1; background-size:cover; background-position:center; }
 .media-1{ background: linear-gradient(155deg, var(--blush), var(--gold)); margin-top:2rem; }
-.media-2{ background: linear-gradient(155deg, var(--green), #1c3229); }
+.media-2{ background: linear-gradient(155deg, var(--green), #0F1B4D); }
 .story-copy h2{ font-size:2.1rem; margin-bottom:1.1rem; }
 .story-copy p{ margin-bottom:1rem; color:#4a3a35; }
 .story-facts{ display:flex; gap:2rem; margin-top:1.8rem; flex-wrap:wrap; }

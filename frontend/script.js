@@ -1,7 +1,7 @@
 // ===== CONFIG =====
 // Change this to your deployed backend URL when you go live.
 // Local testing (Flask running on your machine): keep as is.
-const API_URL = "https://mithai-bhandar-website.onrender.com/api/inquiry";
+const API_URL = "https://mithai-bhandar-website-1.onrender.com";
 
 // ===== CONTACT FORM =====
 const form = document.getElementById("inquiry-form");

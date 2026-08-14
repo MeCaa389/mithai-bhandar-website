@@ -1,7 +1,7 @@
 // ===== CONFIG =====
 // Change this to your deployed backend URL when you go live.
 // Local testing (Flask running on your machine): keep as is.
-const API_URL = "https://mithai-bhandar-website-1.onrender.com/api/inquiry";
+const API_URL = "http://localhost:5000/api/inquiry";
 
 // ===== CONTACT FORM =====
 const form = document.getElementById("inquiry-form");
@@ -16,6 +16,8 @@ form.addEventListener("submit", async (e) => {
     message: form.message.value.trim(),
   };
 
+  const submitBtn = form.querySelector("button[type=submit]");
+  submitBtn.disabled = true;
   status.textContent = "Sending...";
 
   try {
@@ -30,7 +32,17 @@ form.addEventListener("submit", async (e) => {
     status.textContent = "Sent! We'll reply on WhatsApp shortly.";
     form.reset();
   } catch (err) {
-    status.textContent = "Couldn't send — please WhatsApp us directly instead.";
+    // Backend down / asleep / network issue — give them a working fallback
+    // instead of a dead end.
+    const whatsappNumber = "919876543210";
+    const fallbackText = encodeURIComponent(
+      `Hi, I'm ${payload.name} (${payload.phone}). ${payload.message}`
+    );
+    status.innerHTML =
+      `Couldn't send right now. ` +
+      `<a href="https://wa.me/${whatsappNumber}?text=${fallbackText}" target="_blank" rel="noopener">Tap here to send on WhatsApp instead</a>.`;
+  } finally {
+    submitBtn.disabled = false;
   }
 });
 

@@ -199,6 +199,8 @@ h2.center{ text-align:center; }
 }
 .visit-form input:focus, .visit-form textarea:focus{ outline: 2px solid var(--maroon); outline-offset:1px; }
 .form-status{ margin-top:0.8rem; font-size:0.85rem; font-family:var(--font-mono); min-height:1.2em; }
+.form-status a{ color: var(--maroon); font-weight:600; text-decoration:underline; }
+.form-privacy{ margin-top:1rem; font-size:0.72rem; color:#9a8a80; text-align:center; }
 @media (max-width:800px){ .visit-grid{ grid-template-columns:1fr; } }
 
 /* ============ FOOTER ============ */

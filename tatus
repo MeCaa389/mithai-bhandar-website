@@ -1,0 +1,9 @@
+[33m1c5dbcf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update to Strawberry ice cream parlour demo
+[33m92ebf4c[m Fix API URL
+[33mc54c5bc[m Add security, SEO, error handling, privacy note
+[33mf64ee20[m Fix missing API path
+[33m3bcb0a0[m Fix API URL typo
+[33m604dfb5[m Switch storage to Supabase
+[33m54e2508[m Point frontend to live backend
+[33m1db08c9[m Add gunicorn for production
+[33mf6ac072[m Initial retailer template
